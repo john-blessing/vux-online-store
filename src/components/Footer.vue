@@ -70,6 +70,7 @@
             .activeBar{
                 span{
                     color: green;
+                    font-weight: bolder;
                 }
             }
             img{
