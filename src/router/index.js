@@ -56,7 +56,7 @@ export default new Router({
           path: "me",
           name: "me",
           meta: {
-            requiredAuth: false
+            requiredAuth: true
           },
           component(resolve) {
             require.ensure([], _ => resolve(require("../views/Me.vue")), "me");
@@ -72,6 +72,16 @@ export default new Router({
       },
       component(resolve) {
         require.ensure([], _ => resolve(require("../views/Cart.vue")), "cart");
+      }
+    },
+    {
+      path: "/login",
+      name: "login",
+      meta: {
+        requiredAuth: false
+      },
+      component(resolve) {
+        require.ensure([], _ => resolve(require("../views/Login.vue")), "login");
       }
     },
     {

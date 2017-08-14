@@ -6,10 +6,7 @@
 
 <script>
   export default {
-    name: 'app',
-    created(){
-      console.log(123)
-    }
+    name: 'app'
   }
 
 </script>
