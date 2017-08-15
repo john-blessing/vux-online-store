@@ -1,14 +1,22 @@
-# my-vux-project
+# vux-online-store
 
-> 这是Vux模板
+> vux商城Demo
 
-## Build Setup
+# Introduction
+
+利用vux搭建了商城demo
+
+# Example
+
+![cmd-markdown-logo](static/img1.jpeg)
+
+# Use Setup
 
 ``` bash
 # 安装
 npm install
 
-# 启动 (浏览器地址: http://localhost:8080)
+# 启动 (浏览器地址: http://localhost:8999)
 npm run dev
 
 # 打包
