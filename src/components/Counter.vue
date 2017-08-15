@@ -7,31 +7,29 @@
 </template>
 <script>
     export default {
-        props: {
-            num: {
-                default: 0,
-                required: false
-            }
-        },
+        props: ['BuyCount'],
         data() {
             return {
-                count: 0
+                count: this.BuyCount.count
             }
-        },
-        mounted() {
-            this.count = 1;
         },
         methods: {
             reduce() {
                 this.count--;
+                
                 if (this.count < 1) {
                     this.count = 1;
+                } else {
+                    this.$emit('update:count', { type: 0, id: this.BuyCount.id, count: this.count, state: this.BuyCount.state })
                 }
+                
             },
             increase() {
                 this.count++;
                 if (this.count > 5) {
                     this.count = 5;
+                } else {
+                    this.$emit('update:count', { type: 1, id: this.BuyCount.id, count: this.count, state: this.BuyCount.state })
                 }
             }
         }
@@ -40,14 +38,12 @@
 </script>
 <style lang="less">
     .good-counter {
-        width: 200px;
         >div {
             float: left;
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
             border: 1px solid #ccc;
             background: #fff;
-            margin-right: 5px;
             display: flex;
             justify-content: center;
             align-items: center;

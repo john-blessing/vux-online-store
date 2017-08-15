@@ -81,7 +81,25 @@ export default new Router({
         requiredAuth: false
       },
       component(resolve) {
-        require.ensure([], _ => resolve(require("../views/Login.vue")), "login");
+        require.ensure(
+          [],
+          _ => resolve(require("../views/Login.vue")),
+          "login"
+        );
+      }
+    },
+    {
+      path: "/register",
+      name: "register",
+      meta: {
+        requiredAuth: false
+      },
+      component(resolve) {
+        require.ensure(
+          [],
+          _ => resolve(require("../views/Register.vue")),
+          "login"
+        );
       }
     },
     {

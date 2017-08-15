@@ -1,10 +1,11 @@
 <template>
     <div class="login">
+        <x-header title="登录" :left-options="{backText: ''}"></x-header>
         <group style="margin-left: 10px;margin-right: 10px;">
-            <x-input title="账号" v-model="form.username" placeholder="手机号码"></x-input>
+            <x-input v-model="form.username" placeholder="手机号码"></x-input>
         </group>
         <group style="margin-left: 10px;margin-right: 10px;">
-            <x-input title="密码" type="password" v-model="form.password"></x-input>
+            <x-input type="password" v-model="form.password" placeholder="密码"></x-input>
         </group>
         <div class="remember-account">
             <check-icon :value.sync="remember">记住密码</check-icon>
@@ -18,7 +19,7 @@
     </div>
 </template>
 <script>    
-    import { XInput, Group, XButton, CheckIcon } from 'vux'
+    import { XInput, Group, XHeader, XButton, CheckIcon } from 'vux'
     export default {
         data(){
             return {
@@ -33,6 +34,7 @@
             XInput,
             XButton,
             CheckIcon,
+            XHeader,
             Group
         },
         methods: {
@@ -44,7 +46,6 @@
 </script>
 <style lang="less">
     .login{
-        margin-top: 50px;
         .forgive-password{
             text-align: right;
             margin-top: 20px;
