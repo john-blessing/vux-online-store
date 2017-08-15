@@ -44,7 +44,7 @@
         }
     }
 </script>
-<style lang="less">
+<style lang="less" scoped>
     .login{
         .forgive-password{
             text-align: right;

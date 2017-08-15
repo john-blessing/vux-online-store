@@ -7,6 +7,7 @@ import App from "./App";
 import router from "./router";
 import store from "./store";
 import { sync } from "vuex-router-sync";
+import '../static/style.css'
 // 使用被存储
 import VueLocalStorage from "vue-localstorage";
 import { WechatPlugin, AlertPlugin, ToastPlugin, XButton } from "vux";

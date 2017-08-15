@@ -62,7 +62,7 @@
         }
     }
 </script>
-<style lang="less">
+<style lang="less" scoped>
     .register {
         .forgive-password {
             text-align: right;

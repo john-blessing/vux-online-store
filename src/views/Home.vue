@@ -1,14 +1,14 @@
 <template>
     <div class="store-home">
-        <swiper auto height="200px" dots-class="custom-bottom" dots-position="center">
+        <swiper auto height="150px" dots-class="custom-bottom" dots-position="center">
             <swiper-item>
-                <router-link to="/"><img src="https://i8.mifile.cn/v1/a1/ecb64c5e-9741-1535-dab6-28d47e2b0d10.webp?width=360&height=360" style="width:100%"></router-link>
+                <router-link to="/"><img src="../assets/img/swiper_1.jpg" style="width:100%"></router-link>
             </swiper-item>
             <swiper-item>
-                <router-link to="/"><img src="https://i8.mifile.cn/v1/a1/ecb64c5e-9741-1535-dab6-28d47e2b0d10.webp?width=360&height=360" style="width:100%"></router-link>
+                <router-link to="/"><img src="../assets/img/swiper_2.jpg" style="width:100%"></router-link>
             </swiper-item>
             <swiper-item>
-                <router-link to="/"><img src="https://i8.mifile.cn/v1/a1/ecb64c5e-9741-1535-dab6-28d47e2b0d10.webp?width=360&height=360" style="width:100%"></router-link>
+                <router-link to="/"><img src="../assets/img/swiper_2.jpg" style="width:100%"></router-link>
             </swiper-item>
         </swiper>
 
@@ -17,8 +17,8 @@
                 <div :key="i" v-for="i in bottomCount">
                     <div class="goods-item">
                         <div class="header">
-                            <img class="goods-img" src="https://i8.mifile.cn/v1/a1/ecb64c5e-9741-1535-dab6-28d47e2b0d10.webp?width=360&height=360">
-                            <span>￥2000</span>
+                            <img class="goods-img" src="../assets/img/product_img_9.png">
+                            <span>￥8000</span>
                         </div>
                         <div class="content">
                             <p>小米5X 全网通 4GB+64GB 金色 移动联通电信4G手机 双卡双待</p>
@@ -50,7 +50,7 @@
                 onFetching: false,
                 bottomCount: 5,
                 goods: JSON.parse(this.$localStorage.get('goods')) ? JSON.parse(this.$localStorage.get('goods')) : [],
-                Height: (window.screen.height - 250) + 'px'
+                Height: (document.body.offsetHeight - 200) + 'px'
             }
         },
         methods: {
@@ -72,7 +72,7 @@
                 this.goods.push({
                     id: Math.random().toString(36).substr(2),
                     title: '小米5X 全网通 4GB+64GB 金色 移动联通电信4G手机 双卡双待',
-                    price: 2000,
+                    price: 8000,
                     count: 1,
                     state: false
                 })
@@ -93,7 +93,7 @@
         }
     }
 </script>
-<style lang="less" scope>
+<style lang="less" scoped>
     .store-home {
         .goods-item {
             display: flex;

@@ -43,6 +43,7 @@
             width: 20px;
             height: 20px;
             border: 1px solid #ccc;
+            margin-left: -1px;
             background: #fff;
             display: flex;
             justify-content: center;

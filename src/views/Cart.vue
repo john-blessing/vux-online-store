@@ -11,7 +11,7 @@
                         <div class="cart-check-box">
                             <check-icon :value.sync="item.state" @update:value="updateValue"></check-icon>
                         </div>
-                        <x-img src="https://i8.mifile.cn/v1/a1/ecb64c5e-9741-1535-dab6-28d47e2b0d10.webp?width=360&height=360" class="good-img" error-class="ximg-error"></x-img>
+                        <img src="../assets/img/product_img_9.png" class="good-img" />
                         <div>
                             <p class="goods-title">{{item.title}}</p>
                             <div class="price-and-count">

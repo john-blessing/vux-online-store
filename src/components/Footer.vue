@@ -64,7 +64,8 @@
         .self-tab-bar{
             display: flex;
             flex-direction: row;
-            border-top: 1px solid #ccc;
+            border-top: 1px solid #f3f5f7;
+            box-shadow: 0 0 10px 0 rgba(155,143,143,0.6);
             padding-top: 5px;
             background: #fff;
             .activeBar{
